@@ -12,17 +12,18 @@
         <activity
             android:name=".MainActivity"
             android:label="Main Page">
+        </activity>
+        <activity
+            android:name=".CalculatorActivity"
+            android:label="Calculator" />
+        <activity android:name=".ParsingNilaiActivity" />
+        <activity android:name=".ContohPreferenceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".CalculatorActivity"
-            android:label="Calculator" />
-        <activity android:name=".ParsingNilaiActivity" />
-        <activity android:name=".ContohPreferenceActivity"></activity>
     </application>
 
 </manifest>
