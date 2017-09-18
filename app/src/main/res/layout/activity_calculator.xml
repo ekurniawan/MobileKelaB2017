@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="actualsolusi.com.samplekelasb.CalculatorActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView android:text="Bilangan 1 :"
+                android:gravity="right|center"
+                android:textSize="20sp"
+                android:layout_column="1" />
+            <EditText android:id="@+id/txtBil1"
+                android:hint="masukan bilangan 1"
+                android:inputType="numberDecimal"
+                android:layout_column="2"
+                android:ems="10" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView android:text="Bilangan 2 :"
+                android:gravity="right|center"
+                android:textSize="20sp"
+                android:layout_column="1" />
+            <EditText android:id="@+id/txtBil2"
+                android:hint="masukan bilangan 2"
+                android:inputType="numberDecimal"
+                android:layout_column="2"
+                android:ems="10" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView android:text="Hasil :"
+                android:gravity="right|center"
+                android:textSize="20sp"
+                android:layout_column="1" />
+            <EditText android:id="@+id/txtHasil"
+                android:enabled="false"
+                android:layout_column="2"
+                android:ems="10" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RadioGroup android:orientation="horizontal"
+                android:layout_span="2" android:layout_column="1">
+               <RadioButton
+                   android:checked="true"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/rdTambah" android:text="Tambah"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdKurang" android:text="Kurang"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdKali" android:text="Kali"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdBagi" android:text="Bagi"/>
+            </RadioGroup>
+        </TableRow>
+        <TableRow>
+            <Button android:id="@+id/btnHitung" android:text="Hitung"
+                android:layout_column="2" android:layout_width="wrap_content" />
+        </TableRow>
+    </TableLayout>
+</android.support.constraint.ConstraintLayout>
