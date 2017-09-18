@@ -1,8 +1,9 @@
 package actualsolusi.com.samplekelasb;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,7 +12,7 @@ import android.widget.Toast;
 public class ContohPreferenceActivity extends AppCompatActivity {
 
     private EditText txtSetting;
-    private Button btnSetPref,btnShowPref;
+    private Button btnSetPref,btnShowPref,btnShowPrefScreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +49,16 @@ public class ContohPreferenceActivity extends AppCompatActivity {
                 Toast.makeText(ContohPreferenceActivity.this,
                         "Setting : "+strSetting+" IsMute: "+String.valueOf(ismute),
                         Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnShowPrefScreen = (Button)findViewById(R.id.btnShowPrefScreen);
+        btnShowPrefScreen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentPref = new Intent(ContohPreferenceActivity.this,
+                        MyPreferencesActivity.class);
+                startActivity(intentPref);
             }
         });
     }
