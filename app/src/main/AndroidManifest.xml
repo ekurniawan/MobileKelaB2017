@@ -21,7 +21,8 @@
         <activity
             android:name=".CalculatorActivity"
             android:label="Calculator" />
-        <activity android:name=".ParsingNilaiActivity"></activity>
+        <activity android:name=".ParsingNilaiActivity" />
+        <activity android:name=".ContohPreferenceActivity"></activity>
     </application>
 
 </manifest>
