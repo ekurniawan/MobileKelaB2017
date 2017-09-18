@@ -4,5 +4,8 @@
         android:summary="please provide your name" />
     <CheckBoxPreference android:title="Mute Status" android:key="ismute" android:defaultValue="false"
         android:summary="mute status"/>
-
+    <ListPreference android:title="Pilih Bahasa Default" android:key="bahasa"
+        android:entries="@array/listLangArray"
+        android:defaultValue="1"
+        android:entryValues="@array/listLangValue" />
 </PreferenceScreen>
