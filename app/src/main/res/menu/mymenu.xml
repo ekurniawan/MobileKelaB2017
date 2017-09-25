@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/menuCalc" android:title="Calculator" />
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/menuCalc" app:showAsAction="always"
+        android:title="Calculator" android:icon="@mipmap/ic_calculator" />
     <item android:id="@+id/menuPref" android:title="Preference" />
 </menu>
