@@ -41,7 +41,7 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.MyViewHo
     public void onBindViewHolder(MyViewHolder holder, int position) {
         Country c = listCountry.get(position);
         holder.tvCountryName.setText(c.getName());
-        holder.tvPopulation.setText(String.format("%.0f",c.getPopulation()));
+        holder.tvPopulation.setText(String.format("%.2f",c.getPopulation()));
     }
 
     @Override
