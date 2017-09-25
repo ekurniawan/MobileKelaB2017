@@ -4,4 +4,5 @@
     <item android:id="@+id/menuCalc" app:showAsAction="always"
         android:title="Calculator" android:icon="@mipmap/ic_calculator" />
     <item android:id="@+id/menuPref" android:title="Preference" />
+    <item android:id="@+id/menuCountry" android:title="Country" />
 </menu>

@@ -67,6 +67,11 @@ public class MainActivity extends AppCompatActivity {
                         MyPreferencesActivity.class);
                 startActivity(intentPref);
                 return true;
+            case R.id.menuCountry:
+                Intent intentCountry = new Intent(MainActivity.this,
+                        SampleRecyclerView.class);
+                startActivity(intentCountry);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
