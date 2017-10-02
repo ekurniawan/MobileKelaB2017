@@ -1,5 +1,6 @@
 package actualsolusi.com.samplekelasb;
 
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,8 +24,10 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.MyViewHo
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         private TextView tvCountryName, tvPopulation;
+        private CardView cvCountry;
         public MyViewHolder(View itemView) {
             super(itemView);
+            cvCountry = (CardView)itemView.findViewById(R.id.cvCountry);
             tvCountryName = (TextView)itemView.findViewById(R.id.tvCountryName);
             tvPopulation = (TextView)itemView.findViewById(R.id.tvPopulation);
         }
@@ -41,7 +44,7 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.MyViewHo
     public void onBindViewHolder(MyViewHolder holder, int position) {
         Country c = listCountry.get(position);
         holder.tvCountryName.setText(c.getName());
-        holder.tvPopulation.setText(String.format("%.2f",c.getPopulation()));
+        holder.tvPopulation.setText(String.format("%.0f",c.getPopulation()));
     }
 
     @Override
