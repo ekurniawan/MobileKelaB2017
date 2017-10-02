@@ -41,7 +41,8 @@ public class DetailCountryActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Country editCountry = SampleRecyclerView.listCountry.get(pos);
                 editCountry.setName(etCountryName.getText().toString());
-                editCountry.setPopulation(Double.parseDouble(etPopulation.getText().toString()));
+                editCountry.setPopulation(Double.parseDouble(
+                        etPopulation.getText().toString().replace(",","")));
                 Toast.makeText(DetailCountryActivity.this,"Data Country berhasil diedit !",
                         Toast.LENGTH_SHORT).show();
                 finish();
