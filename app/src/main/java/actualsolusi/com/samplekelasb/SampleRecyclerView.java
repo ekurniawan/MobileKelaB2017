@@ -13,9 +13,13 @@ import models.Country;
 public class SampleRecyclerView extends AppCompatActivity {
 
     private RecyclerView rvCountry;
-    private List<Country> listCountry = new ArrayList<>();
+    public static List<Country> listCountry = new ArrayList<>();
 
-    private void IsiData(){
+    static {
+        IsiData();
+    }
+
+    private static void IsiData(){
         Country country1 = new Country();
         country1.setName("Indonesia");
         country1.setPopulation(250000000);
@@ -37,8 +41,6 @@ public class SampleRecyclerView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sample_recycler_view);
-
-        IsiData();
 
         rvCountry = (RecyclerView)findViewById(R.id.rvCountry);
         CountryAdapter adapter = new CountryAdapter(listCountry);
