@@ -37,11 +37,7 @@ public class SampleRecyclerView extends AppCompatActivity {
         listCountry.add(country3);
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sample_recycler_view);
-
+    private void SetDataAdapter(){
         rvCountry = (RecyclerView)findViewById(R.id.rvCountry);
         CountryAdapter adapter = new CountryAdapter(listCountry);
         rvCountry.setAdapter(adapter);
@@ -49,5 +45,13 @@ public class SampleRecyclerView extends AppCompatActivity {
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         rvCountry.setLayoutManager(llm);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_sample_recycler_view);
+
+        SetDataAdapter();
     }
 }
