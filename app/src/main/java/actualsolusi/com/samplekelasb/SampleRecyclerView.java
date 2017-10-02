@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +43,20 @@ public class SampleRecyclerView extends AppCompatActivity {
         rvCountry = (RecyclerView)findViewById(R.id.rvCountry);
         CountryAdapter adapter = new CountryAdapter(listCountry);
         rvCountry.setAdapter(adapter);
+
+        rvCountry.addOnItemTouchListener(new RecyclerItemListener(getApplicationContext(),
+                rvCountry, new RecyclerItemListener.RecyclerTouchListener() {
+            @Override
+            public void OnClickItem(View v, int position) {
+                String country = listCountry.get(position).getName();
+                Toast.makeText(SampleRecyclerView.this,"Anda memilih "+country,Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void OnLongClickItem(View v, int position) {
+
+            }
+        }));
 
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
