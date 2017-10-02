@@ -1,6 +1,7 @@
 package actualsolusi.com.samplekelasb;
 
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -57,6 +58,9 @@ public class SampleRecyclerView extends AppCompatActivity {
 
             }
         }));
+
+        rvCountry.addItemDecoration(new DividerItemDecoration(
+                ContextCompat.getDrawable(getApplicationContext(),R.drawable.item_decoration)));
 
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
