@@ -1,12 +1,12 @@
 package actualsolusi.com.samplekelasb;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,8 +49,13 @@ public class SampleRecyclerView extends AppCompatActivity {
                 rvCountry, new RecyclerItemListener.RecyclerTouchListener() {
             @Override
             public void OnClickItem(View v, int position) {
-                String country = listCountry.get(position).getName();
-                Toast.makeText(SampleRecyclerView.this,"Anda memilih "+country,Toast.LENGTH_SHORT).show();
+                //String country = listCountry.get(position).getName();
+                //Toast.makeText(SampleRecyclerView.this,"Anda memilih "+country,Toast.LENGTH_SHORT).show();
+                Intent intentCounty = new Intent(SampleRecyclerView.this,DetailCountryActivity.class);
+                Bundle b = new Bundle();
+                b.putInt("position",position);
+                intentCounty.putExtras(b);
+                startActivity(intentCounty);
             }
 
             @Override
