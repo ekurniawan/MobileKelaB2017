@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="Main Page"></activity>
+            android:label="Main Page" />
         <activity
             android:name=".CalculatorActivity"
             android:label="Calculator" />
@@ -27,7 +27,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DetailCountryActivity"></activity>
+        <activity android:name=".DetailCountryActivity" />
+        <activity android:name=".TambahCountryActivity"></activity>
     </application>
 
 </manifest>
