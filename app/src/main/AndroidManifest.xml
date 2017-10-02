@@ -12,11 +12,6 @@
         <activity
             android:name=".MainActivity"
             android:label="Main Page">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".CalculatorActivity"
@@ -24,7 +19,13 @@
         <activity android:name=".ParsingNilaiActivity" />
         <activity android:name=".ContohPreferenceActivity"></activity>
         <activity android:name=".MyPreferencesActivity" />
-        <activity android:name=".SampleRecyclerView"></activity>
+        <activity android:name=".SampleRecyclerView">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

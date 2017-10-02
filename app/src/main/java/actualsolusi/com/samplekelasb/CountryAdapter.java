@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.text.NumberFormat;
 import java.util.List;
 
 import models.Country;
@@ -27,7 +28,6 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.MyViewHo
         private CardView cvCountry;
         public MyViewHolder(View itemView) {
             super(itemView);
-            cvCountry = (CardView)itemView.findViewById(R.id.cvCountry);
             tvCountryName = (TextView)itemView.findViewById(R.id.tvCountryName);
             tvPopulation = (TextView)itemView.findViewById(R.id.tvPopulation);
         }
@@ -44,7 +44,7 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.MyViewHo
     public void onBindViewHolder(MyViewHolder holder, int position) {
         Country c = listCountry.get(position);
         holder.tvCountryName.setText(c.getName());
-        holder.tvPopulation.setText(String.format("%.0f",c.getPopulation()));
+        holder.tvPopulation.setText(NumberFormat.getIntegerInstance().format(c.getPopulation()));
     }
 
     @Override
