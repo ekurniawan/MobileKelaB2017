@@ -84,7 +84,8 @@ public class SampleRecyclerView extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.menuTambah:
-                Intent intentTambah = new Intent();
+                Intent intentTambah = new Intent(SampleRecyclerView.this,
+                        TambahCountryActivity.class);
                 startActivity(intentTambah);
                 return true;
             default:
