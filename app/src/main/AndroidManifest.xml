@@ -28,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".DetailCountryActivity" />
-        <activity android:name=".TambahCountryActivity"></activity>
+        <activity android:name=".TambahCountryActivity" android:label="Tambah Country"></activity>
     </application>
 
 </manifest>
