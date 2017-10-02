@@ -11,21 +11,23 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="Main Page">
-        </activity>
+            android:label="Main Page"></activity>
         <activity
             android:name=".CalculatorActivity"
             android:label="Calculator" />
         <activity android:name=".ParsingNilaiActivity" />
-        <activity android:name=".ContohPreferenceActivity"></activity>
+        <activity android:name=".ContohPreferenceActivity" />
         <activity android:name=".MyPreferencesActivity" />
-        <activity android:name=".SampleRecyclerView">
+        <activity
+            android:name=".SampleRecyclerView"
+            android:label="List Of Country">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".DetailCountryActivity"></activity>
     </application>
 
 </manifest>
