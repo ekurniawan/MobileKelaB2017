@@ -71,7 +71,8 @@ public class EditDokterActivity extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 Dokter deleteDokter = DokterActivity.listDokter.remove(pos);
-                                Toast.makeText(getApplicationContext(),"Data Berhasil Didelete !",Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Data Berhasil Didelete !",
+                                        Toast.LENGTH_LONG).show();
                                 finish();
                             }
                         });
