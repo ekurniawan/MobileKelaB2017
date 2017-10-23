@@ -30,5 +30,4 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration  {
             mDivider.draw(c);
         }
     }
-
 }
