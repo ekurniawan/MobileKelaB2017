@@ -30,16 +30,21 @@
         <activity
             android:name=".DokterActivity"
             android:label="List Of Dokter">
+
+        </activity>
+        <activity
+            android:name=".TambahDokterActivity"
+            android:label="Tambah Data Dokter" />
+        <activity
+            android:name=".EditDokterActivity"
+            android:label="Edit Dokter" />
+        <activity android:name=".ProgressDialogActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".TambahDokterActivity"
-            android:label="Tambah Data Dokter" />
-        <activity android:name=".EditDokterActivity" android:label="Edit Dokter"></activity>
     </application>
 
 </manifest>
